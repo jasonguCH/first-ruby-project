@@ -18,3 +18,26 @@ require 'faker'
     }
   )
 end
+
+3.times do
+  Store.create(
+    {
+      name: Faker::Company.name,
+      location: Faker::Address.city,
+      address: Faker::Address.street_address,
+      description: Faker::Lorem.paragraph
+    }
+  )
+end
+
+Product.all.each do |product|
+  Store.all.each do |store|
+    Stock.create(
+      {
+        product_id: product.id,
+        store_id: store.id,
+        quantity: rand(0..100)
+      }
+    )
+  end
+end
