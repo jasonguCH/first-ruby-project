@@ -1,0 +1,120 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "order_receipt_id": {
+              "type": "string"
+            },
+            "direction": {
+              "type": "integer"
+            },
+            "base_currency": {
+              "type": "string"
+            },
+            "counter_currency": {
+              "type": "string"
+            },
+            "order_amount": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "status": {
+              "type": "integer"
+            },
+            "order_amount_currency": {
+              "type": "string"
+            },
+            "fee": {
+              "type": "string"
+            },
+            "grab_pay_fee": {
+              "type": "string"
+            },
+            "fee_currency": {
+              "type": "string"
+            },
+            "net_amount": {
+              "type": "null"
+            },
+            "received_currency": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "reduced_fee_code": {
+              "type": "null"
+            },
+            "credit_card_fee": {
+              "type": "string"
+            },
+            "message": {
+              "type": "null"
+            },
+            "price": {
+              "type": "string"
+            },
+            "transaction_type": {
+              "type": "string"
+            },
+            "human_type": {
+              "type": "string"
+            },
+            "human_status": {
+              "type": "string"
+            },
+            "fee_percent": {
+              "type": "string"
+            },
+            "original_fee_percent": {
+              "type": "decimal"
+            },
+            "reduce_fee_code_object": {
+              "type": "null"
+            },
+            "credit_card_fee_percent": {
+              "type": "string"
+            },
+            "point_earned": {
+              "type": "null"
+            },
+            "payment_method": {
+              "type": "string"
+            },
+            "payment_method_display": {
+              "type": "string"
+            },
+            "credit_card": {
+              "type": "null"
+            },
+            "client_order_id": {
+              "type": ["string", "null"]
+            }
+          },
+          "required": [ "id", "direction", "base_currency", "counter_currency", "order_amount", "created_at", "status", "order_amount_currency", "fee", "grab_pay_fee", "fee_currency", "net_amount", "received_currency", "type", "reduced_fee_code", "credit_card_fee", "message", "price", "transaction_type", "human_type", "human_status", "fee_percent", "reduce_fee_code_object", "credit_card_fee_percent", "point_earned", "payment_method", "payment_method_display", "credit_card" ],
+          "additionalProperties": false
+        }
+      },
+      "required": [ "id", "type", "attributes" ],
+      "additionalProperties": false
+    }
+  },
+  "required": ["data"],
+  "additionalProperties": false
+}

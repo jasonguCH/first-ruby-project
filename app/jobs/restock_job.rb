@@ -2,7 +2,6 @@ class RestockJob < ApplicationJob
   queue_as :default
 
   def perform(*args)
-    # print all args
     # deserialize the arg into different variable
     product_id = args[0][:product_id]
     store_id = args[0][:store_id]

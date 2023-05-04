@@ -1,0 +1,114 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "destination_address": {
+              "type": "null"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "tx_id": {
+              "type": "null"
+            },
+            "user_id": {
+              "type": "integer"
+            },
+            "amount": {
+              "type": "string"
+            },
+            "tx_fee": {
+              "type": "string"
+            },
+            "total_amount": {
+              "type": "string"
+            },
+            "status_to_s": {
+              "type": "string"
+            },
+            "status": {
+              "type": "integer"
+            },
+            "send_via": {
+              "type": "null"
+            },
+            "sms_recipient_number": {
+              "type": "null"
+            },
+            "sms_recipient_country": {
+              "type": "null"
+            },
+            "sms_sent": {
+              "type": "null"
+            },
+            "sms_fee": {
+              "type": "null"
+            },
+            "sms_fee_currency": {
+              "type": "null"
+            },
+            "email_recipient": {
+              "type": "null"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "updated_at": {
+              "type": "string"
+            },
+            "note": {
+              "type": "null"
+            },
+            "meta_data": {
+              "type": "object"
+            },
+            "recipient_fullname": {
+              "type": "null"
+            },
+            "address_origin": {
+              "type": "null"
+            },
+            "link_explorer": {
+              "type": "null"
+            },
+            "destination_tag": {
+              "type": "null"
+            },
+            "via_sygnahub": {
+              "type": "null"
+            },
+            "user_code": {
+              "type": "null"
+            },
+            "private_wallet_name": {
+              "type": "string"
+            },
+            "stable_coin_request": {
+              "type": "null"
+            }
+          },
+          "required": ["id", "destination_address", "currency", "tx_id", "user_id", "amount", "tx_fee", "total_amount", "status_to_s", "status", "send_via", "sms_recipient_number", "sms_recipient_country", "sms_sent", "sms_fee", "sms_fee_currency", "email_recipient", "created_at", "updated_at", "note", "meta_data", "recipient_fullname", "address_origin", "link_explorer", "destination_tag", "via_sygnahub", "private_wallet_name", "user_code", "stable_coin_request"],
+          "additionalProperties": false
+        }
+      },
+      "required": [ "id", "type", "attributes" ],
+      "additionalProperties": false
+    }
+  },
+  "required": ["data"],
+  "additionalProperties": false
+}

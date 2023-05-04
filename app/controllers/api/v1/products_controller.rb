@@ -6,23 +6,18 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def create
-    @product =  Product.new(
-      name: params[:name],
-      price: params[:price],
-      description: params[:description],
-      brand: params[:brand]
-    )
-    if @product.save
-      render json: @product
+    @product = Product.create(product_params)
+    if @product.valid?
+      render json: @product, status: 201
     else
-      render json: {error: @product.errors.full_messages}, status: 400
+      render json: { error: "Product not created" }, status: 400
     end
   end
 
   def show
     @product = Product.find_by(id: params[:id])
     unless @product
-      return render json: {error: "Product not found"}, status: 404
+      return render json: { error: "Product not found" }, status: 404
     end
     render json: @product
   end
@@ -30,7 +25,7 @@ class Api::V1::ProductsController < ApplicationController
   def update
     @product = Product.find_by(id: params[:id])
     unless @product
-      return render json: {error: "Product not found"}, status: 404
+      return render json: { error: "Product not found" }, status: 404
     end
     @product.update(
       name: params[:name],
@@ -44,7 +39,7 @@ class Api::V1::ProductsController < ApplicationController
   def destroy
     @product = Product.find_by(id: params[:id])
     unless @product
-      return render json: {error: "Product not found"}, status: 404
+      return render json: { error: "Product not found" }, status: 404
     end
     @product.destroy
     render json: @product

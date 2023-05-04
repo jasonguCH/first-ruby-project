@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "uuid"
+    },
+    "created_at": {
+      "type": "integer"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "uuid"
+          },
+          "created_at": {
+            "type": "integer"
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "byte_size": {
+                  "type": "integer"
+                },
+                "content_type": {
+                  "type": "string"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "byte_size",
+                "content_type",
+                "filename",
+                "url"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "created_at",
+          "files"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "id",
+    "created_at",
+    "documents"
+  ],
+  "additionalProperties": false
+}

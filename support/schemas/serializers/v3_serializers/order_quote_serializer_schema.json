@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "quote_id": {
+              "type": "string"
+            },
+            "locked_price": {
+              "type": "string"
+            },
+            "base_currency": {
+              "type": "string"
+            },
+            "counter_currency": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "string"
+            },
+            "expired_at": {
+              "type": "integer"
+            },
+            "direction": {
+              "type": "string"
+            },
+            "payment_method": {
+              "type": "string"
+            },
+            "credit_card": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "null"
+                }
+              }
+            },
+            "remain_seconds": {
+              "type": "integer"
+            }
+          },
+          "required": [ "id", "quote_id", "locked_price", "base_currency", "counter_currency", "amount", "expired_at", "direction", "payment_method", "credit_card", "remain_seconds" ],
+          "additionalProperties": false
+        }
+      },
+      "required": [ "id", "type", "attributes" ],
+      "additionalProperties": false
+    }
+  },
+  "required": ["data"],
+  "additionalProperties": false
+}
